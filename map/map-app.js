@@ -1,4 +1,13 @@
 import rooms from '../rooms/rooms.js';
+import { getChar } from '../utils.js';
+
+
+
+
+const character = getChar();
+if (character.hp <= 0) {
+    window.location.href = '../results/results.html';
+}
 
 
 

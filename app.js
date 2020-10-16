@@ -21,4 +21,5 @@ form.addEventListener('submit', (e) => {
         completed: {},
         items: {}
     });
+    window.location.href = './map/index.html';
 });

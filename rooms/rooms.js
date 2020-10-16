@@ -32,58 +32,37 @@ export default [
         }]
     },
     {
-        id: 'dragon',
+        id: 'room1',
         title: 'room1',
         map: {
             top: '50%',
             left: '45%'
         },
-        image: 'dragon.jpg',
-        audio: 'dragon.wav',
-        action: 'dragon-growl.aiff',
+        image: '../assets/skeleton.jpg',
         description: `
-        You travel to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You walk further into the dungeon and in to next room. in front of you you see a shambling 
+        skeleton holding a rusty sword.
     `,
         choices: [{
             id: 'run',
-            description: 'Get the hell out of the village',
+            description: 'RUN!!',
             result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            your cowardice knows no bounds you attempt to beat a hasty
+            retreat back to the main entrance. the skeleton is too fast,
+            it swings its sword at you and scores a devistating blow.  
         `,
             hp: -35,
-            gold: 35
+            gold: 0
         }, {
             id: 'fight',
             description: 'Fiiiiiggghhhttt!',
             result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            "Die Evil Fiend" you yell as you raise your weapon and charge, you dispatch 
+            this lowly mninion with ease!
         `,
-            hp: -45,
-            gold: 0
-        }, {
-            id: 'archer',
-            description: 'Emulate that guy from LOR who shot an arrow',
-            result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
-        `,
-            hp: 0,
-            gold: 90
-        }]
+            hp: -5,
+            gold: 50
+        }] 
     },
     {
         id: 'treasure',
@@ -92,40 +71,22 @@ export default [
             top: '50%',
             left: '73%'
         },
-        prerequisites: ['dragon', 'monsters'],
         image: 'treasure-chests.png',
         audio: 'treasure-chests.wav',
         action: 'chest-opening.wav',
-        description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
-    `,
+        description: ' you walk into the room to see an ancient treasure chest!'
+        ,
         choices: [{
             id: 'wooden',
-            description: 'A Wooden Chest',
-            result: 'You grab 40 gold pieces!',
+            description: 'An Ancient Chest',
+            result: 'You grab 100 gold pieces!',
             hp: 0,
-            gold: 40
-        }, {
-            id: 'golden',
-            description: 'A Golden Chest',
-            result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-            hp: -50,
-            gold: 0
-        }, {
-            id: 'jeweled',
-            description: 'A Jeweled Chest',
-            result: 'A warm light engulfs you and you gain 35 hp',
-            hp: 35,
-            gold: 0
+            gold: 100
         }]
     },
     { 
-        id: 'room3',
-        title: 'room3',
+        id: 'room2',
+        title: 'room2',
         map: {
             top: '70%',
             left: '65%'

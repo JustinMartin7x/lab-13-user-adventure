@@ -1,0 +1,29 @@
+html {
+    display: flex;
+    justify-content: center;
+    height: 768px;
+    width: 1224px;
+}
+header {
+    height: 100px;
+    width: 1000px;
+    background-color: lightblue;
+    margin-bottom: 1em;
+}
+section {
+    height: 700px;
+    width: 1100px;
+    background-image: url(../assets/map.jpg);
+    background-size: cover;
+    
+}
+li {
+    font-size: 1em;
+    font-family: cursive;
+    outline: none;
+    
+}
+a {
+    color: brown;
+    outline: none;
+}

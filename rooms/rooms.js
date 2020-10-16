@@ -71,9 +71,7 @@ export default [
             top: '50%',
             left: '73%'
         },
-        image: 'treasure-chests.png',
-        audio: 'treasure-chests.wav',
-        action: 'chest-opening.wav',
+        image: '../assets/tresure.jpg',
         description: ' you walk into the room to see an ancient treasure chest!'
         ,
         choices: [{
@@ -87,21 +85,29 @@ export default [
     { 
         id: 'room2',
         title: 'room2',
+        image: '../assets/rest.jpg',
+        description: 'you walk into a room that looks like a barracks! its ancient but it looks safe, ',
         map: {
             top: '70%',
             left: '65%'
         },
-
-    },
-    { 
-        id: 'room4',
-        title: 'room4',
-        map: {
-            top: '60%',
-            left: '55%'
+        choices: [{
+            id: 'rest',
+            result: 'you regain your strength and feel revitalized',
+            hp: 30,
+            gold: 10
         },
+        {
+            id: 'search room',
+            result: ' you find a potion of greater vitality hidden under a cot',
+            hp: 100,
+            gold: 100
+        }
+            
+        ]
 
     },
+   
     { 
         id: 'room5',
         title: 'room5',
@@ -109,6 +115,23 @@ export default [
             top: '27%',
             left: '44%'
         },
+        image: '../assets/lich.jpg',
+        description: 'as you walk into the room your hackles rise as a sense of dread and danger overwhelms you ahead in the center of the room floating a foot off the ground is a litch it screams at you and attacks',
+        choices: [
+            {
+                id: 'attack',
+                description: 'you leap into mortal combat with the lich and vanquish it',
+                hp: -20,
+                gold: 4000,
+            },
+            {
+                id: 'run',
+                description: 'you attempt to flee, however the litch casts a spell at you and traps your soul',
+                hp: -10000,
+                gold: -10000
+                
+            }
+        ]
 
     }
 

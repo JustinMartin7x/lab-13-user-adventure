@@ -5,9 +5,10 @@ import { getChar } from '../utils.js';
 
 
 const character = getChar();
-if (character.hp <= 0) {
+if (character.hp <= 0 || character.completed.room5 === true){
     window.location.href = '../results/results.html';
 }
+
 
 
 
